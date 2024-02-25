@@ -1,0 +1,10 @@
+{% extends "books/base.html" %}
+
+{% block content %}
+<h2>{{ book.title }}</h2>
+<p>{{ book.author_full_name }}, {{ book.year_of_publishing }} г., тираж {{ book.copies_printed }}</p>
+<p>{{ book.short_description }}</p>
+<p>
+    <a href="{% url 'books_view' %}">Список книг</a>
+</p>
+{% endblock %}
